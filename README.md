@@ -152,6 +152,6 @@ Every week's project will include:
 
 ---
 
-Made with ❤️ by **Alireza Sargazi**
+Made with **Alireza Sargazi**
 
 </div>
