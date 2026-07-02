@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شیرین‌کده | قنادی آنلاین</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,500&family=Lato:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+    <!-- ═══════════════ NAVIGATION ═══════════════ -->
+    <nav class="nav">
+      <div class="nav__logo" onclick="goTo('home')">
+        <div class="logo-icon">🍰</div>
+        <div class="logo-text">
+          <div class="brand">شیرین‌کده</div>
+          <div class="tagline">Confectionery</div>
+        </div>
+      </div>
+      <ul class="nav__links">
+        <li><button onclick="goTo('home')" data-link="home">خانه</button></li>
+        <li>
+          <button onclick="goTo('products')" data-link="products">
+            محصولات
+          </button>
+        </li>
+        <li><a href="#about-section" onclick="goTo('home')">درباره ما</a></li>
+        <li>
+          <a href="#contact-section" onclick="goTo('home')">تماس با ما</a>
+        </li>
+      </ul>
+      <div class="nav__actions">
+        <button class="btn-login" onclick="goTo('login')">ورود</button>
+        <button class="btn-register" onclick="goTo('register')">ثبت‌نام</button>
+      </div>
+      <!-- Hamburger Button -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        onclick="toggleMenu()"
+        aria-label="منو"
+      >
+        <span class="ham-line ham-line--top"></span>
+        <span class="ham-line ham-line--mid"></span>
+        <span class="ham-line ham-line--bot"></span>
+      </button>
+    </nav>
+
+    <!-- ═══════════════ MOBILE MENU OVERLAY ═══════════════ -->
+    <div class="mobile-menu" id="mobileMenu">
+      <!-- Animated background blobs -->
+      <div class="menu-blob menu-blob--1"></div>
+      <div class="menu-blob menu-blob--2"></div>
+      <div class="menu-blob menu-blob--3"></div>
+
+      <!-- Floating particles -->
+      <div class="menu-particles" id="menuParticles"></div>
+
+      <!-- Close button -->
+      <button class="menu-close" onclick="toggleMenu()">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path
+            d="M4 4L24 24M24 4L4 24"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+
+      <!-- Logo inside menu -->
+      <div class="menu-logo">
+        <div class="menu-logo__icon">🍰</div>
+        <div class="menu-logo__name">شیرین‌کده</div>
+      </div>
+
+      <!-- Nav links -->
+      <nav class="menu-nav">
+        <ul>
+          <li class="menu-item" style="--i: 0">
+            <button onclick="menuGoTo('home')">
+              <span class="menu-item__num">۰۱</span>
+              <span class="menu-item__text">خانه</span>
+              <span class="menu-item__icon">🏠</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--i: 1">
+            <button onclick="menuGoTo('products')">
+              <span class="menu-item__num">۰۲</span>
+              <span class="menu-item__text">محصولات</span>
+              <span class="menu-item__icon">🎂</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--i: 2">
+            <button onclick="menuGoTo('home')">
+              <span class="menu-item__num">۰۳</span>
+              <span class="menu-item__text">درباره ما</span>
+              <span class="menu-item__icon">✨</span>
+            </button>
+          </li>
+          <li class="menu-item" style="--i: 3">
+            <button onclick="menuGoTo('home')">
+              <span class="menu-item__num">۰۴</span>
+              <span class="menu-item__text">تماس با ما</span>
+              <span class="menu-item__icon">📞</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Auth buttons -->
+      <div class="menu-auth">
+        <button class="menu-auth__login" onclick="menuGoTo('login')">
+          ورود
+        </button>
+        <button class="menu-auth__register" onclick="menuGoTo('register')">
+          ثبت‌نام رایگان ✦
+        </button>
+      </div>
+
+      <!-- Social links -->
+      <div class="menu-social">
+        <span>📷</span><span>📘</span><span>🐦</span>
+      </div>
+
+      <!-- Decorative text -->
+      <div class="menu-marquee">
+        <span
+          >شیرین‌کده &nbsp;·&nbsp; Confectionery &nbsp;·&nbsp; قنادی آنلاین
+          &nbsp;·&nbsp; شیرین‌کده &nbsp;·&nbsp; Confectionery &nbsp;·&nbsp;
+          قنادی آنلاین &nbsp;·&nbsp;</span
+        >
+      </div>
+    </div>
+
+    <!-- ═══════════════ صفحه ۱: خانه ═══════════════ -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero__content">
+          <span class="eyebrow">✦ تازه از فر، تا در خانه شما</span>
+          <h1>طعمی که<em>به یاد می‌مونه</em></h1>
+          <p>
+            کیک‌ها، شیرینی‌ها و دسرهای دست‌ساز با بهترین مواد اولیه، پخته‌شده با
+            عشق در قنادی شیرین‌کده. هر لقمه، یک خاطره شیرین.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="goTo('products')">
+              مشاهده محصولات →
+            </button>
+            <button class="btn-secondary" onclick="goTo('register')">
+              عضویت رایگان
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="num">۱۲+</div>
+              <div class="label">سال تجربه</div>
+            </div>
+            <div class="stat">
+              <div class="num">۸۰۰۰+</div>
+              <div class="label">مشتری راضی</div>
+            </div>
+            <div class="stat">
+              <div class="num">۴.۹</div>
+              <div class="label">امتیاز کاربران</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="floating-badge floating-badge--top">
+            🚚 ارسال <span>امروز</span>
+          </div>
+          <div class="visual-circle"><div class="cake-emoji">🎂</div></div>
+          <div class="floating-badge floating-badge--bottom">
+            ⭐ ۴.۹ از <span>۵</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="categories-strip">
+        <h2>دسته‌بندی محصولات</h2>
+        <div class="cats">
+          <div class="cat-item" onclick="goTo('products')">
+            <div class="cat-icon">🎂</div>
+            <div class="cat-name">کیک</div>
+          </div>
+          <div class="cat-item" onclick="goTo('products')">
+            <div class="cat-icon">🧁</div>
+            <div class="cat-name">کاپ‌کیک</div>
+          </div>
+          <div class="cat-item" onclick="goTo('products')">
+            <div class="cat-icon">🍪</div>
+            <div class="cat-name">کلوچه</div>
+          </div>
+          <div class="cat-item" onclick="goTo('products')">
+            <div class="cat-icon">🍫</div>
+            <div class="cat-name">شکلات</div>
+          </div>
+          <div class="cat-item" onclick="goTo('products')">
+            <div class="cat-icon">🥐</div>
+            <div class="cat-name">کروسان</div>
+          </div>
+          <div class="cat-item" onclick="goTo('products')">
+            <div class="cat-icon">🍮</div>
+            <div class="cat-name">دسر</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured" id="about-section">
+        <div class="featured__header">
+          <div class="left">
+            <div class="label">منتخب قنادی</div>
+            <h2>محصولات پرطرفدار</h2>
+            <p>
+              محبوب‌ترین شیرینی‌ها و کیک‌های شیرین‌کده که مشتریان عاشقشون شدن
+            </p>
+          </div>
+          <button class="btn-all" onclick="goTo('products')">
+            همه محصولات
+          </button>
+        </div>
+
+        <div class="products-grid" id="homeProductsGrid"></div>
+      </div>
+
+      <div class="testimonials">
+        <div class="label">نظرات مشتریان</div>
+        <h2>چی میگن مشتریای شیرین‌کده؟</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              کیک تولد دخترم رو از اینجا سفارش دادم، فوق‌العاده خوشمزه و زیبا
+              بود! حتما باز سفارش می‌دم.
+            </p>
+            <div class="author">
+              <div class="avatar">س</div>
+              <div>
+                <div class="name">سارا احمدی</div>
+                <div class="role">مشتری وفادار</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              کیفیت مواد اولیه واقعا حس می‌شه. شیرینی‌های خشک‌شون رو برای مهمونی
+              گرفتم همه تعریف کردن.
+            </p>
+            <div class="author">
+              <div class="avatar">ر</div>
+              <div>
+                <div class="name">رضا محمدی</div>
+                <div class="role">مشتری جدید</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              بسته‌بندی شیک، ارسال سریع و طعم بی‌نظیر. شیرین‌کده شده قنادی
+              همیشگی خانواده‌مون.
+            </p>
+            <div class="author">
+              <div class="avatar">م</div>
+              <div>
+                <div class="name">مریم کریمی</div>
+                <div class="role">مشتری وفادار</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <div class="inner">
+          <h2>از تازه‌ترین‌ها باخبر شوید</h2>
+          <p>
+            عضو خبرنامه شیرین‌کده شوید و از تخفیف‌ها و محصولات جدید زودتر از همه
+            مطلع شوید
+          </p>
+          <form
+            class="nl-form"
+            onsubmit="
+              event.preventDefault();
+              showToast('با موفقیت عضو خبرنامه شدید! 🎉');
+            "
+          >
+            <input type="email" placeholder="ایمیل خود را وارد کنید" required />
+            <button type="submit">عضویت</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ صفحه ۲: ثبت‌نام ═══════════════ -->
+    <section id="register" class="page">
+      <div class="auth-page">
+        <div class="auth-page__visual">
+          <div class="big-emoji">🧁</div>
+          <div class="auth-brand">
+            <h2>به خانواده شیرین‌کده بپیوندید</h2>
+            <p>
+              با ثبت‌نام، از تخفیف‌های ویژه اعضا، پیگیری سفارشات و پیشنهادات
+              شخصی‌سازی‌شده بهره‌مند شوید.
+            </p>
+          </div>
+          <div class="decorative-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="auth-page__form-wrap">
+          <div class="form-box">
+            <div class="form-title">ساخت حساب کاربری</div>
+            <div class="form-subtitle">
+              چند ثانیه طول می‌کشه، شیرین مثل کیک! 🎂
+            </div>
+
+            <form
+              onsubmit="
+                event.preventDefault();
+                showToast('حساب کاربری با موفقیت ساخته شد! 🎉');
+                goTo('home');
+              "
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label>نام</label>
+                  <input type="text" placeholder="مثلاً سارا" required />
+                </div>
+                <div class="form-group">
+                  <label>نام خانوادگی</label>
+                  <input type="text" placeholder="مثلاً احمدی" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>شماره موبایل</label>
+                <div class="input-icon-wrap">
+                  <span class="input-icon">📱</span>
+                  <input type="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>ایمیل</label>
+                <div class="input-icon-wrap">
+                  <span class="input-icon">✉️</span>
+                  <input
+                    type="email"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>رمز عبور</label>
+                <div class="input-icon-wrap">
+                  <span class="input-icon">🔒</span>
+                  <input
+                    type="password"
+                    placeholder="حداقل ۸ کاراکتر"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>تکرار رمز عبور</label>
+                <div class="input-icon-wrap">
+                  <span class="input-icon">🔒</span>
+                  <input
+                    type="password"
+                    placeholder="رمز عبور را دوباره وارد کنید"
+                    required
+                  />
+                </div>
+              </div>
+
+              <label class="form-check">
+                <input type="checkbox" required />
+                <span>با <a href="#">قوانین و مقررات</a> شیرین‌کده موافقم</span>
+              </label>
+
+              <button type="submit" class="btn-form-submit">ثبت‌نام</button>
+            </form>
+
+            <div class="divider">یا</div>
+            <button
+              class="btn-google"
+              onclick="showToast('ورود با گوگل (نمونه)')"
+            >
+              🔍 ثبت‌نام با گوگل
+            </button>
+
+            <div class="form-footer">
+              قبلاً حساب ساخته‌اید؟
+              <button onclick="goTo('login')">وارد شوید</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ صفحه ۳: ورود ═══════════════ -->
+    <section id="login" class="page">
+      <div class="auth-page">
+        <div class="auth-page__visual">
+          <div class="big-emoji">🍪</div>
+          <div class="auth-brand">
+            <h2>دوباره خوش اومدید!</h2>
+            <p>
+              وارد حساب کاربری خود شوید و به سفارش محصولات شیرین و خوشمزه ادامه
+              دهید.
+            </p>
+          </div>
+          <div class="decorative-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="auth-page__form-wrap">
+          <div class="form-box">
+            <div class="form-title">ورود به حساب کاربری</div>
+            <div class="form-subtitle">خوشحالیم که برگشتید 👋</div>
+
+            <form
+              onsubmit="
+                event.preventDefault();
+                showToast('با موفقیت وارد شدید! 🎉');
+                goTo('home');
+              "
+            >
+              <div class="form-group">
+                <label>ایمیل یا شماره موبایل</label>
+                <div class="input-icon-wrap">
+                  <span class="input-icon">✉️</span>
+                  <input type="text" placeholder="example@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>رمز عبور</label>
+                <div class="input-icon-wrap">
+                  <span class="input-icon">🔒</span>
+                  <input
+                    type="password"
+                    placeholder="رمز عبور خود را وارد کنید"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <label class="form-check" style="margin-bottom: 0">
+                  <input type="checkbox" />
+                  <span>مرا به خاطر بسپار</span>
+                </label>
+                <a
+                  href="#"
+                  style="font-size: 0.85rem; color: #c9952a; font-weight: 600"
+                  >فراموشی رمز؟</a
+                >
+              </div>
+
+              <button type="submit" class="btn-form-submit">ورود</button>
+            </form>
+
+            <div class="divider">یا</div>
+            <button
+              class="btn-google"
+              onclick="showToast('ورود با گوگل (نمونه)')"
+            >
+              🔍 ورود با گوگل
+            </button>
+
+            <div class="form-footer">
+              حساب کاربری ندارید؟
+              <button onclick="goTo('register')">ثبت‌نام کنید</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ صفحه ۴: محصولات ═══════════════ -->
+    <section id="products" class="page">
+      <div class="products-page">
+        <div class="products-page__hero">
+          <h1>ویترین شیرینی‌ها</h1>
+          <p>بهترین کیک‌ها، شیرینی‌ها و دسرهای دست‌ساز را کشف کنید</p>
+        </div>
+
+        <div class="products-page__body">
+          <aside class="sidebar">
+            <div class="sidebar__title">فیلترها</div>
+
+            <div class="filter-group">
+              <h4>دسته‌بندی</h4>
+              <label class="filter-option"
+                ><input type="checkbox" checked /> همه محصولات</label
+              >
+              <label class="filter-option"><input type="checkbox" /> کیک</label>
+              <label class="filter-option"
+                ><input type="checkbox" /> کاپ‌کیک</label
+              >
+              <label class="filter-option"
+                ><input type="checkbox" /> کلوچه</label
+              >
+              <label class="filter-option"
+                ><input type="checkbox" /> شکلات</label
+              >
+              <label class="filter-option"><input type="checkbox" /> دسر</label>
+            </div>
+
+            <div class="filter-group">
+              <h4>محدوده قیمت</h4>
+              <input type="range" min="0" max="100" class="price-range" />
+              <div class="price-labels">
+                <span>۵۰ هزار</span><span>۵۰۰ هزار</span>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>ویژگی‌ها</h4>
+              <label class="filter-option"
+                ><input type="checkbox" /> بدون گلوتن</label
+              >
+              <label class="filter-option"
+                ><input type="checkbox" /> بدون شکر افزوده</label
+              >
+              <label class="filter-option"
+                ><input type="checkbox" /> جدید</label
+              >
+            </div>
+          </aside>
+
+          <div class="products-main">
+            <div class="toolbar">
+              <div class="result-count">
+                <span id="productCount">8</span> محصول یافت شد
+              </div>
+              <select class="sort-select">
+                <option>مرتب‌سازی: پیشنهادی</option>
+                <option>ارزان‌ترین</option>
+                <option>گران‌ترین</option>
+                <option>محبوب‌ترین</option>
+              </select>
+            </div>
+
+            <div class="products-grid" id="allProductsGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ صفحه ۵: جزئیات محصول ═══════════════ -->
+    <section id="detail" class="page">
+      <div class="detail-page">
+        <div class="breadcrumb">
+          <button onclick="goTo('home')">خانه</button>
+          <span class="sep">/</span>
+          <button onclick="goTo('products')">محصولات</button>
+          <span class="sep">/</span>
+          <span class="current" id="detailBreadcrumb">کیک شکلاتی رویال</span>
+        </div>
+
+        <div class="detail-page__main">
+          <div class="detail-page__gallery">
+            <div class="main-image" id="detailMainImage">🎂</div>
+            <div class="thumb-row">
+              <div class="thumb active">🎂</div>
+              <div class="thumb">🍰</div>
+              <div class="thumb">🧁</div>
+              <div class="thumb">🍫</div>
+            </div>
+          </div>
+
+          <div class="detail-page__info">
+            <div class="badge-row">
+              <span class="tag-best">پرفروش</span>
+              <span class="tag-new">جدید</span>
+            </div>
+            <h1 id="detailName">کیک شکلاتی رویال</h1>
+            <div class="rating-row">
+              <span class="stars">★★★★★</span>
+              <span class="score">۴.۹</span>
+              <span class="reviews">(۱۲۴ نظر)</span>
+            </div>
+
+            <div class="price-block">
+              <span class="price-main" id="detailPrice">۳۲۰,۰۰۰ تومان</span>
+              <span class="price-old">۳۸۰,۰۰۰</span>
+              <span class="discount">۱۶٪ تخفیف</span>
+            </div>
+
+            <p class="desc" id="detailDesc">
+              کیک شکلاتی رویال، ترکیبی لوکس از لایه‌های نرم کیک شکلاتی بلژیکی،
+              خامه گاناش تلخ و روکش شکلات آب‌شده است. این کیک با بهترین کاکائوی
+              خالص و تخم‌مرغ‌های محلی تهیه می‌شود و برای جشن تولد، سالگرد و
+              مناسبت‌های خاص شما طراحی شده. هر تکه از این کیک، تجربه‌ای از طعم
+              اصیل شکلات بلژیکی را به ارمغان می‌آورد.
+            </p>
+
+            <div class="options-row">
+              <h4>اندازه کیک</h4>
+              <div class="size-btns">
+                <button>۱ کیلویی</button>
+                <button class="selected">۱.۵ کیلویی</button>
+                <button>۲ کیلویی</button>
+                <button>۳ کیلویی</button>
+              </div>
+            </div>
+
+            <div class="qty-add">
+              <div class="qty-control">
+                <button onclick="changeQty(-1)">−</button>
+                <span class="qty-num" id="qtyNum">۱</span>
+                <button onclick="changeQty(1)">+</button>
+              </div>
+              <button
+                class="btn-cart"
+                onclick="showToast('به سبد خرید اضافه شد! 🛒')"
+              >
+                افزودن به سبد خرید
+              </button>
+              <button class="btn-fav" onclick="toggleFav(this)">🤍</button>
+            </div>
+
+            <div class="delivery-badges">
+              <div class="d-badge"><span>🚚</span> ارسال سریع همان روز</div>
+              <div class="d-badge">
+                <span>❄️</span> بسته‌بندی خنک نگه‌دارنده
+              </div>
+              <div class="d-badge"><span>↩️</span> ضمانت بازگشت وجه</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-page__tabs">
+          <div class="tab-nav">
+            <button class="active" onclick="switchTab(event, 'ingredients')">
+              مواد تشکیل‌دهنده
+            </button>
+            <button onclick="switchTab(event, 'nutrition')">ارزش غذایی</button>
+            <button onclick="switchTab(event, 'reviews')">نظرات (۱۲۴)</button>
+          </div>
+
+          <div class="tab-content active" id="ingredients">
+            <div class="ingredients-grid">
+              <div class="ingredient">
+                <div class="icon">🍫</div>
+                <div class="name">شکلات بلژیکی</div>
+                <div class="amount">۴۰۰ گرم</div>
+              </div>
+              <div class="ingredient">
+                <div class="icon">🥚</div>
+                <div class="name">تخم‌مرغ محلی</div>
+                <div class="amount">۶ عدد</div>
+              </div>
+              <div class="ingredient">
+                <div class="icon">🧈</div>
+                <div class="name">کره حیوانی</div>
+                <div class="amount">۲۵۰ گرم</div>
+              </div>
+              <div class="ingredient">
+                <div class="icon">🌾</div>
+                <div class="name">آرد سفید</div>
+                <div class="amount">۳۰۰ گرم</div>
+              </div>
+              <div class="ingredient">
+                <div class="icon">🍯</div>
+                <div class="name">شکر</div>
+                <div class="amount">۲۰۰ گرم</div>
+              </div>
+              <div class="ingredient">
+                <div class="icon">🥛</div>
+                <div class="name">خامه تازه</div>
+                <div class="amount">۱۵۰ میل</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="nutrition">
+            <table class="nutrition-table">
+              <thead>
+                <tr>
+                  <th>ترکیب</th>
+                  <th>مقدار در هر ۱۰۰ گرم</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>انرژی</td>
+                  <td>۴۲۰ کیلوکالری</td>
+                </tr>
+                <tr>
+                  <td>چربی</td>
+                  <td>۲۲ گرم</td>
+                </tr>
+                <tr>
+                  <td>کربوهیدرات</td>
+                  <td>۴۸ گرم</td>
+                </tr>
+                <tr>
+                  <td>قند</td>
+                  <td>۳۲ گرم</td>
+                </tr>
+                <tr>
+                  <td>پروتئین</td>
+                  <td>۶ گرم</td>
+                </tr>
+                <tr>
+                  <td>سدیم</td>
+                  <td>۱۸۰ میلی‌گرم</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tab-content" id="reviews">
+            <div class="reviews-list">
+              <div class="review">
+                <div class="review-header">
+                  <div class="avatar">س</div>
+                  <div class="meta">
+                    <div class="name">سارا احمدی</div>
+                    <div class="date">۲ هفته پیش</div>
+                  </div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+                <p>
+                  این کیک واقعاً فوق‌العاده بود! طعم شکلاتش خیلی غلیظ و خوشمزه
+                  بود، برای تولد همسرم گرفتم و همه مهمون‌ها تعریف کردن.
+                </p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <div class="avatar">ع</div>
+                  <div class="meta">
+                    <div class="name">علی رضایی</div>
+                    <div class="date">۱ ماه پیش</div>
+                  </div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+                <p>
+                  بسته‌بندی خیلی شیک بود و کیک کاملاً تازه و خنک به دستم رسید.
+                  حتماً دوباره سفارش می‌دم.
+                </p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <div class="avatar">ن</div>
+                  <div class="meta">
+                    <div class="name">نگار حسینی</div>
+                    <div class="date">۱ ماه پیش</div>
+                  </div>
+                  <div class="review-stars">★★★★☆</div>
+                </div>
+                <p>
+                  طعمش عالی بود فقط کمی شیرین‌تر از انتظارم بود. در کل تجربه
+                  خوبی بود و پیشنهادش می‌کنم.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ فوتر ═══════════════ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="icon">🍰</span><span>شیرین‌کده</span>
+          </div>
+         <p>
+            قنادی آنلاین شیرین‌کده از سال 1402 با عشق و مهارت، شیرین‌ترین لحظات
+            زندگی شما را می‌سازد.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>دسترسی سریع</h4>
+          <ul>
+            <li onclick="goTo('home')">خانه</li>
+            <li onclick="goTo('products')">محصولات</li>
+            <li onclick="goTo('login')">ورود</li>
+            <li onclick="goTo('register')">ثبت‌نام</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>خدمات مشتریان</h4>
+          <ul>
+            <li>پیگیری سفارش</li>
+            <li>شرایط بازگشت</li>
+            <li>سوالات متداول</li>
+            <li id="contact-section">حریم خصوصی</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>تماس با ما</h4>
+          <ul>
+            <li>📍 جزیره کیش، خیابان سرمایه 4</li>
+            <li>📞 09379339170</li>
+            <li>✉️ info@shirinkadeh.ir</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span
+          >© ۱۴۰۳ شیرین‌کده. تمامی حقوق محفوظ است.
+          <strong> طراحی و توسعه : علیرضا سرگزی</strong></span
+        >
+        <div class="socials">
+          <span>📷</span><span>📘</span><span>🐦</span><span>📌</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
