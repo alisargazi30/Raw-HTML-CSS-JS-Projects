@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="علیرضا سرگزی - مهندس نرم‌افزار و DevOps با تخصص در طراحی و توسعه نرم‌افزارهای تحت وب. بیش از پنج سال تجربه در ساخت محصولات دیجیتال، مشاوره مارکتینگ و پیاده‌سازی راهکارهای هوش مصنوعی برای کسب‌وکارها." />
+    <meta name="keywords" content="علیرضا سرگزی, Alireza Sargazi, DevOps Engineer, Software Developer, Web Designer, Digital Marketing, AI Consultant, Full Stack Developer, Frontend Developer, Backend Developer" />
+    <meta name="author" content="علیرضا سرگزی, Alireza Sargazi" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alisargazi30.github.io" />
+    <meta property="og:title" content="علیرضا سرگزی - مهندس نرم‌افزار و DevOps" />
+    <meta property="og:description" content="مهندس نرم‌افزار و DevOps با تخصص در طراحی و توسعه نرم‌افزارهای تحت وب. بیش از پنج سال تجربه در ساخت محصولات دیجیتال، مشاوره مارکتینگ و پیاده‌سازی راهکارهای هوش مصنوعی برای کسب‌وکارها." />
+    
+    <title>علیرضا سرگزی - مهندس نرم‌افزار و DevOps</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+    <canvas id="canvas3d"></canvas>
+
+    <nav id="navbar">
+      <div class="nav-logo">AS</div>
+      <ul class="nav-links">
+        <li><a href="#hero">خانه</a></li>
+        <li><a href="#about">درباره</a></li>
+        <li><a href="#skills">مهارت‌ها</a></li>
+        <li><a href="#services">خدمات</a></li>
+        <li><a href="#projects">پروژه‌ها</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
+      <div class="theme-switcher">
+        <button
+          class="theme-btn active"
+          data-t="dark"
+          title="بنفش/آبی"
+        ></button>
+        <button class="theme-btn" data-t="gold" title="طلایی/نارنجی"></button>
+        <button class="theme-btn" data-t="green" title="سبز/فیروزه‌ای"></button>
+        <button class="theme-btn" data-t="pink" title="صورتی/بنفش"></button>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero">
+      <div class="hero-badge">✦ در دسترس برای پروژه‌های جدید</div>
+      <h1>
+        سلام، من
+        <span class="name">علیرضا سرگزی</span>
+        هستم
+      </h1>
+      <p class="subtitle" id="typewriter-text"></p>
+      <div class="roles">
+        <span class="role-tag">DevOps Engineer</span>
+        <span class="role-tag">Software Developer</span>
+        <span class="role-tag">Web Designer</span>
+        <span class="role-tag">Digital Marketing</span>
+        <span class="role-tag">AI Consultant</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">مشاهده پروژه‌ها</a>
+        <a href="#contact" class="btn-outline">تماس با من</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>اسکرول کنید</span>
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">درباره من</div>
+          <h2 class="section-title">چه کسی هستم؟</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-img-wrap reveal">
+            <div class="avatar-ring"></div>
+            <div class="avatar-circle">ع</div>
+          </div>
+          <div class="reveal">
+            <p
+              style="
+                font-size: 1.05rem;
+                line-height: 2;
+                color: var(--text2);
+                margin-bottom: 1.5rem;
+              "
+            >
+              مهندس نرم‌افزار و DevOps با تخصص در طراحی و توسعه نرم‌افزارهای تحت
+              وب. بیش از پنج سال تجربه در ساخت محصولات دیجیتال، مشاوره مارکتینگ
+              و پیاده‌سازی راهکارهای هوش مصنوعی برای کسب‌وکارها.
+            </p>
+            <p
+              style="
+                font-size: 0.95rem;
+                color: var(--text3);
+                margin-bottom: 2rem;
+              "
+            >
+              عاشق تکنولوژی، کد تمیز، و ساختن چیزهایی که واقعاً به آدم‌ها کمک
+              کنه.
+            </p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-num">+۵</div>
+                <div class="stat-label">سال تجربه</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">+۳۰</div>
+                <div class="stat-label">پروژه انجام‌شده</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">+۲۰</div>
+                <div class="stat-label">مشتری راضی</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">۵</div>
+                <div class="stat-label">حوزه تخصصی</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">تخصص‌ها</div>
+          <h2 class="section-title">مهارت‌ها و تکنولوژی‌ها</h2>
+          <p class="section-desc">
+            ابزارها و فناوری‌هایی که هر روز باهاشون کار می‌کنم
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🌐 فرانت‌اند</div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">SASS/SCSS</span>
+              <span class="skill-tag">Tailwind</span>
+              <span class="skill-tag">Three.js</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">⚙️ بک‌اند</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">Laravel</span>
+              <span class="skill-tag">REST API</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🚀 DevOps</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernetes</span>
+              <span class="skill-tag">CI/CD</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Nginx</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🧠 هوش مصنوعی</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">LLM API</span>
+              <span class="skill-tag">OpenAI</span>
+              <span class="skill-tag">Claude</span>
+              <span class="skill-tag">Prompt Eng</span>
+              <span class="skill-tag">RAG</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">📈 دیجیتال مارکتینگ</div>
+            <div class="skill-tags">
+              <span class="skill-tag">SEO</span>
+              <span class="skill-tag">Google Ads</span>
+              <span class="skill-tag">Content</span>
+              <span class="skill-tag">Analytics</span>
+              <span class="skill-tag">Social Media</span>
+              <span class="skill-tag">Email Mkt</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="skill-cat-title">🗄️ دیتابیس</div>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">SQLite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">خدمات</div>
+          <h2 class="section-title">چطور می‌تونم کمکت کنم؟</h2>
+          <p class="section-desc">
+            طیف گسترده‌ای از خدمات دیجیتال برای رشد کسب‌وکار شما
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">🌐</div>
+            <div class="service-title">طراحی وب‌سایت</div>
+            <p class="service-desc">
+              طراحی و توسعه وب‌سایت‌های مدرن، سریع و ریسپانسیو با بهترین
+              تکنولوژی‌های روز دنیا
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">📱</div>
+            <div class="service-title">اپلیکیشن تحت وب</div>
+            <p class="service-desc">
+              ساخت نرم‌افزارهای تحت وب پیچیده با React، Django و سایر
+              فریم‌ورک‌های حرفه‌ای
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🚀</div>
+            <div class="service-title">DevOps & Infrastructure</div>
+            <p class="service-desc">
+              راه‌اندازی CI/CD، Docker، سرور و بهینه‌سازی زیرساخت برای عملکرد
+              بهتر
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🧠</div>
+            <div class="service-title">مشاور هوش مصنوعی</div>
+            <p class="service-desc">
+              پیاده‌سازی راهکارهای AI، چت‌بات هوشمند، و خودکارسازی فرآیندها
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">📈</div>
+            <div class="service-title">دیجیتال مارکتینگ</div>
+            <p class="service-desc">
+              استراتژی سئو، تبلیغات گوگل، بازاریابی محتوا و رشد آنلاین کسب‌وکار
+            </p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">🎨</div>
+            <div class="service-title">UI/UX Design</div>
+            <p class="service-desc">
+              طراحی رابط کاربری زیبا، آسان و کاربردی که تجربه کاربری عالی
+              می‌سازد
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">نمونه کار</div>
+          <h2 class="section-title">پروژه‌های اخیر</h2>
+          <p class="section-desc">
+            بخشی از پروژه‌هایی که روی آن‌ها کار کرده‌ام
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-thumb">🛒</div>
+            <div class="project-body">
+              <div class="project-title">پلتفرم فروشگاه آنلاین</div>
+              <p class="project-desc">
+                طراحی و توسعه کامل یک فروشگاه اینترنتی با پنل مدیریت
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Django</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-thumb">🤖</div>
+            <div class="project-body">
+              <div class="project-title">چت‌بات هوشمند</div>
+              <p class="project-desc">
+                ساخت دستیار هوش مصنوعی برای پشتیبانی مشتریان
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">LLM API</span>
+                <span class="project-tag">RAG</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-thumb">📊</div>
+            <div class="project-body">
+              <div class="project-title">داشبورد تحلیل داده</div>
+              <p class="project-desc">
+                پنل مدیریت پیشرفته با نمودارهای تعاملی و گزارش‌گیری
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Vue.js</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">تماس</div>
+          <h2 class="section-title">بیایید با هم کار کنیم</h2>
+          <p class="section-desc">
+            یک پروژه در ذهن دارید؟ بیایید درباره‌اش صحبت کنیم
+          </p>
+        </div>
+        <div class="contact-wrapper reveal">
+          <div class="contact-grid">
+            <div class="input-group">
+              <label class="input-label">نام شما</label>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="مثلاً: محمد رضایی"
+              />
+            </div>
+            <div class="input-group">
+              <label class="input-label">ایمیل</label>
+              <input
+                class="input-field"
+                type="email"
+                placeholder="example@email.com"
+              />
+            </div>
+            <div class="input-group">
+              <label class="input-label">موضوع</label>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="چه کمکی می‌خواید؟"
+              />
+            </div>
+            <div class="input-group">
+              <label class="input-label">پیام</label>
+              <textarea
+                class="input-field"
+                placeholder="پروژه‌تون رو برام توضیح بدید..."
+              ></textarea>
+            </div>
+            <button class="btn-primary" style="width: 100%; margin-top: 0.5rem">
+              ارسال پیام ✦
+            </button>
+          </div>
+        </div>
+        <div class="contact-info reveal">
+          <a href="mailto:mr.alireza.sargazi1@gmail.com" target="_blank">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>mr.alireza.sargazi1@email.com
+            </div>
+          </a>
+          <div class="contact-item cursor">
+            <span class="contact-icon">💼</span>LinkedIn
+          </div>
+          <a
+            href="https://github.com/alisargazi30"
+            target="_blank"
+            rel="follow"
+          >
+            <div class="contact-item">
+              <span class="contact-icon">💻</span>GitHub
+            </div>
+          </a>
+          <a
+            href="https://t.me/alidevweb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>تلگرام
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        قدرت گرفته توسط <strong>علیرضا سرگزی</strong> — <span id="year"></span>
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
