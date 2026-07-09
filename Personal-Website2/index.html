@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="علیرضا سرگزی، Alireza Sargazi" />
+  <meta name="description" content="سینا شهرکی، معمار و طراح فضاهای مسکونی، تجاری و فرهنگی. طراحی معماری که با انسان حرف می‌زند. نمونه کارها، تخصص‌ها و اطلاعات تماس." />
+  <meta name="keywords" content="سینا شهرکی, معمار, طراحی معماری, پروژه‌های معماری, تخصص معماری, تماس با معمار" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="سینا شهرکی، معمار و طراح فضاهای مسکونی، تجاری و فرهنگی. طراحی معماری که با انسان حرف می‌زند. نمونه کارها، تخصص‌ها و اطلاعات تماس." />
+  <meta property="og:title" content="سینا شهرکی | معمار" />
+  <title>سینا شهرکی | معمار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">سینا <span>شهرکی</span></a>
+    <ul>
+      <li><a href="#about">درباره</a></li>
+      <li><a href="#projects">پروژه‌ها</a></li>
+      <li><a href="#skills">تخصص</a></li>
+      <li><a href="#contact">تماس</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-tag">معمار — زاهدان، ایران</p>
+    <h1 class="hero-title">فضا را<br/><em>می‌سازم.</em></h1>
+    <p class="hero-sub">از ایده تا اجرا — طراحی معماری که با انسان حرف می‌زند.</p>
+    <a href="#projects" class="hero-cta">مشاهده پروژه‌ها</a>
+    <div class="scroll-hint">
+      <span></span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">درباره من</p>
+        <h2 class="section-title">معماری برای<br/>زندگی واقعی</h2>
+        <p>من سینا شهرکی هستم، مهندس معماری با بیش از نیم دهه تجربه در طراحی فضاهای مسکونی، تجاری و فرهنگی. باور دارم معماری خوب از درک دقیق انسان شروع می‌شه.</p>
+        <p>رویکردم ترکیب هندسه صادقانه، مصالح طبیعی، و نور روز به عنوان عنصر اصلی طراحیه. هر پروژه یه داستان منحصربه‌فرده.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">سال تجربه</span></div>
+        <div class="stat"><span class="stat-num">13</span><span class="stat-label">پروژه تکمیل‌شده</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">جایزه ملی</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">کشور</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects" style="background:#111;">
+    <p class="section-label">نمونه کارها</p>
+    <h2 class="section-title">پروژه‌های منتخب</h2>
+    <div class="projects-grid" id="projectsGrid">
+      <!-- filled by JS -->
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <p class="section-label">تخصص</p>
+    <h2 class="section-title">حوزه‌های تخصصی</h2>
+    <div class="skills-list" id="skillsList"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p class="section-label">تماس</p>
+        <h2 class="section-title">بیایید چیزی<br/>بسازیم</h2>
+        <p>برای مشاوره اولیه یا ارسال بریف پروژه‌تون با من در تماس باشید.</p>
+        <div class="contact-info">
+          <a href="mailto:sina@shahraki.ir">sina@shahraki.ir</a>
+          <a href="tel:+989123456789">۰۹۱۲ ۳۴۵ ۶۷۸۹</a>
+          <a href="#">تهران — خیابان ولیعصر</a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="return false">
+        <input type="text" placeholder="نام شما" />
+        <input type="email" placeholder="ایمیل" />
+        <input type="text" placeholder="موضوع" />
+        <textarea placeholder="توضیح پروژه…"></textarea>
+        <button class="btn-send" type="submit">ارسال پیام</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>© ۱۴۰۳ سینا شهرکی — تمام حقوق محفوظ است طراحی و توسعه : <b>علیرضا سرگزی</b></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
